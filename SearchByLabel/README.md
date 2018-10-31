@@ -7,14 +7,13 @@ Download the dataset from Dropbox.
 
 
 ### Create labels file
-Start your mysql-server.
 
-Run ```prepare.py``` to create path-to-label dictionary.
+Run ```prepare.py``` and ```labelize.py``` to create path-to-label dictionary.
 
 Run ```inverse_label.py``` to create label-to-path dictionary.
 
 ### Run backend
-Run ```python server2.py ```.
+Run ```server2.py ```.
 
 
 ### Run frontend
