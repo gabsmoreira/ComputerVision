@@ -1,8 +1,9 @@
 # Image Label Search Engine 
 
-## How to run
+This image label search engine was created using ```ssd_512_resnet50_v1_voc``` from GluonCV.
 
-### Preparing your enviroment
+## Preparing your enviroment
+
 Download the dataset from Dropbox.
 
 
@@ -11,6 +12,15 @@ Download the dataset from Dropbox.
 Run ```prepare.py``` and ```labelize.py``` to create path-to-label dictionary.
 
 Run ```inverse_label.py``` to create label-to-path dictionary.
+
+
+## Running without interface 
+Run ```python search_test.py <label> ```.
+
+The program will return the path of every image identified with this label.
+
+
+## Running with interface 
 
 ### Run backend
 Run ```server2.py ```.

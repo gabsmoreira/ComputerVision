@@ -27,12 +27,12 @@ def getimage():
 		label = json.loads(request.data)['img']
 	
 
-	pickle_in = open("processed_labels_inverse.pickle","rb")
+	pickle_in = open("./files/processed_labels_inverse.pickle","rb")
 	list_images_labels = pickle.load(pickle_in)
 	results_paths = list_images_labels[label]
 	# print(list_images_labels)
 
-	pickle_in = open("processed.pickle","rb")
+	pickle_in = open("./files/processed.pickle","rb")
 	list_images_processed = pickle.load(pickle_in)    
 	count = 0
 	for path in results_paths:
@@ -65,7 +65,7 @@ def getimage():
 			results.append(str(base64.b64encode(img_encoded)))
 			count +=1
 	if(len(results) == 0):
-		img = cv.imread('./noimagefound.jpg')
+		img = cv.imread('./img/noimagefound.jpg')
 		# encode image as jpeg
 		_, img_encoded = cv.imencode('.jpg', img)
 		results.append(str(base64.b64encode(img_encoded)))

@@ -1,6 +1,6 @@
 import pickle
 
-pickle_in = open("processed_labels.pickle","rb")
+pickle_in = open("./files/processed_labels.pickle","rb")
 list_images_labels = pickle.load(pickle_in)
 results_paths = []
 
@@ -18,7 +18,7 @@ for i in range(len(list_images_labels)):
       d[label] = []
 
 
-pickle_out = open("processed_labels_inverse.pickle","wb")
+pickle_out = open("./files/processed_labels_inverse.pickle","wb")
 pickle.dump(d, pickle_out)
 
 print(d)

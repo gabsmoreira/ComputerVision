@@ -19,7 +19,7 @@ labels = []
 net = model_zoo.get_model('ssd_512_resnet50_v1_voc', pretrained=True)
 # PATH = './dataset-projeto-3-2/gabrielfm2/sheep5.jpg'
 
-pickle_in = open("processed.pickle","rb")
+pickle_in = open("./files/processed.pickle","rb")
 list_images_processed = pickle.load(pickle_in)    
 
 for image_processed in list_images_processed:
@@ -42,7 +42,7 @@ for image_processed in list_images_processed:
       # print(net.classes[index])
   labels.append(image_label)
 
-pickle_out = open("processed_labels.pickle","wb")
+pickle_out = open("./files/processed_labels.pickle","wb")
 pickle.dump(labels, pickle_out)
 # print(class_IDs[0][0][0])
 # print(net.classes[0])

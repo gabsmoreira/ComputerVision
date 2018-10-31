@@ -24,21 +24,22 @@ list_images_processed = []
 directories = os.listdir('./dataset-projeto-3-2')
 for dirs in directories:
   print(dirs)
-  paths = './dataset-projeto-3-2' + '/' + dirs
-  user_imgs = os.listdir(paths)
-  for imgs in user_imgs:
-    image_processed = []
-    image_path = paths + '/' + imgs
-    # print(paths+ '/' + imgs)
-    image_processed.append(image_path)
-    x, img = data.transforms.presets.ssd.load_test(image_path, short=512)
-    class_IDs, scores, bounding_boxs = net(x)
-    image_processed.append(class_IDs)
-    image_processed.append(scores)
-    image_processed.append(bounding_boxs)
-    list_images_processed.append(image_processed)
+  if(dirs != '.DS_Store'):
+    paths = './dataset-projeto-3-2' + '/' + dirs
+    user_imgs = os.listdir(paths)
+    for imgs in user_imgs:
+      image_processed = []
+      image_path = paths + '/' + imgs
+      # print(paths+ '/' + imgs)
+      image_processed.append(image_path)
+      x, img = data.transforms.presets.ssd.load_test(image_path, short=512)
+      class_IDs, scores, bounding_boxs = net(x)
+      image_processed.append(class_IDs)
+      image_processed.append(scores)
+      image_processed.append(bounding_boxs)
+      list_images_processed.append(image_processed)
 
-pickle_out = open("processed.pickle","wb")
+pickle_out = open("./files/processed.pickle","wb")
 pickle.dump(list_images_processed, pickle_out)    
 # print('Shape of pre-processed image:', x.shape)
 
