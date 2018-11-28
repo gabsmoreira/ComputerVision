@@ -4,10 +4,10 @@ The image search engine is used to search for look alike images given an initial
 
 
 ## Results
-  Image used to search.
+  ### Input
   <img src='./results/ele0.png'>
 
-  Results:
+  ### Output
   <img src='./results/ele1.png'>
 
 
@@ -15,10 +15,10 @@ The image search engine is used to search for look alike images given an initial
 
   -----
 
-  Image used to search.
+  ### Input
   <img src='./results/garfield0.png'>
 
-  Results:
+  ### Output
   <img src='./results/garfield1.png'>
 
 
