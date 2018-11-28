@@ -1,4 +1,32 @@
-# Image Search Engine 
+# Image Search Engine
+
+The image search engine is used to search for look alike images given an initial image.
+
+
+## Results
+  Image used to search.
+  <img src='./results/ele0.png'>
+
+  Results:
+  <img src='./results/ele1.png'>
+
+
+  <img src='./results/ele2.png'>
+
+  -----
+
+  Image used to search.
+  <img src='./results/garfield0.png'>
+
+  Results:
+  <img src='./results/garfield1.png'>
+
+
+  <img src='./results/garfield2.png'>
+
+
+  <img src='./results/garfield3.png'>
+
 
 
 ## Preparing your enviroment
